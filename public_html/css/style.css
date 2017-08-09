@@ -80,6 +80,10 @@ header h3 {
     padding-bottom: 50px;
 }
 
+.text-danger {
+    color: #a94442;
+}
+
 /* Footer Section */
 .footer {
     padding-right: 15px;

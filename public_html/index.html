@@ -8,11 +8,11 @@
     <meta name="description" content="Demi and Thomas Wedding 2018">
     <meta name="author" content="Thomas Coe">
 
-    <title>Wedding</title>
+    <title>Thomas + Demi 2018</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -102,7 +102,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h1 align="center">RSVP</h1>
-                    <form name="RSVP" id="rsvpForm">
+                    <form name="RSVP" id="rsvpForm" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Your full name</label>
@@ -138,7 +138,7 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>How many people are you completing this RSVP for?</label>
-                                <select class="form-control">
+                                <select class="form-control" id="rsvpcount">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -158,17 +158,18 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Do any attendees have dietary restrictions?</label>
-                                <textarea rows="5" class="form-control" placeholder="Dietary restrictions" id="dietary"></textarea>
+                                <textarea rows="2" class="form-control" placeholder="Dietary restrictions" id="dietary"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Questions/Comments</label>
-                                <textarea rows="5" class="form-control" placeholder="Comments" id="message"></textarea>
+                                <textarea rows="4" class="form-control" placeholder="Comments" id="message"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
+                        <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
                                 <button type="submit" class="btn btn-success btn-lg">Submit</button>
@@ -187,7 +188,11 @@
                     <h1>Registry</h1>
                     <br>
                     <a href="https://www.amazon.com/wedding/thomas-coe-demi-mott-omaha-july-2018/registry/2649KQNTF05JD">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Amazon_logo_plain.svg/500px-Amazon_logo_plain.svg.png" style="width: 100%; max-width: 200px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Amazon_logo_plain.svg/500px-Amazon_logo_plain.svg.png" style="width: 100%; max-width: 200px;">
+                    </a>
+                    <br><br>
+                    <a href="https://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&inventoryCallEnabled=true&registryId=544950161&pwsurl=">
+                        <img src="https://d3ei0t9fwgqcl.cloudfront.net/2016/05/27/02/21/17/97e5b886-a115-4f59-8fdd-d61fec749a1f/4214388.png" style="width: 100%; max-width: 200px;">
                     </a>
                 </div>
             </div>
@@ -219,6 +224,8 @@
             minutes: 30,
         });
     </script>
+
+    <script src="js/jqBootstrapValidation.js"></script>
 
     <!-- Custom JS -->
     <script src="js/wedding.js"></script>
