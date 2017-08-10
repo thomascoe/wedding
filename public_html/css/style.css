@@ -15,6 +15,20 @@ body {
 h1 {
     font-size: 300%;
 }
+h2 {
+    font-size: 200%;
+}
+h3 {
+    font-size: 150%;
+}
+h4 {
+    font-size: 120%;
+    font-family: 'Quicksand', sans-serif;
+}
+p {
+    font-size: 70%;
+    font-family: 'Quicksand', sans-serif;
+}
 img {
     width: 100%;
 }
@@ -52,6 +66,7 @@ img {
 }
 .navbar {
     background-image: linear-gradient(to bottom,#FFECDC 0,#FFDAB9 100%);
+    opacity: 0.9;
 }
 .navbar-nav>li>a {
     font-family: 'Oswald', sans-serif;
@@ -63,9 +78,6 @@ header {
 }
 header h1 {
     font-size: 500%;
-}
-header h3 {
-    font-family: 'Oswald', sans-serif;
 }
 
 /* Content containers */
@@ -100,7 +112,7 @@ header h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 .simply-countdown > .simply-section {
     width: 100px;

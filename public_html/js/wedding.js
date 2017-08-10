@@ -9,6 +9,11 @@ $(function() {
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
+            $('#success').html("<div class='alert alert-danger'>");
+            $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                .append("</button>");
+            $('#success > .alert-danger').append("<strong>There was an error submitting the form. Please check your input.</strong>");
+            $('#success > .alert-danger').append('</div>');
         },
         submitSuccess: function($form, event) {
             // Prevent spam click and default submit behaviour
@@ -16,6 +21,7 @@ $(function() {
             event.preventDefault();
 
             // Inform user the email is being sent
+            $('#success').html('');
             $('#success').html("<div class='alert alert-info'>");
             $('#success > .alert-info')
                 .append("<strong>Processing your RSVP...</strong>");
@@ -72,7 +78,7 @@ $(function() {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Sorry " + name + ", it seems that there was an error processing your request. Please contact us via email to complete your RSVP.");
+                    $('#success > .alert-danger').append("<strong>Sorry " + name + ", it seems that there was an error processing your request. Please contact us via email to complete your RSVP.</strong>");
                     $('#success > .alert-danger').append('</div>');
                     $('#rsvpForm').trigger("reset");
                 },
