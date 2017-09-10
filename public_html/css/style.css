@@ -33,6 +33,14 @@ img {
     width: 100%;
 }
 
+/* No background gradient on the carousel controls */
+.carousel-control.left {
+    background-image: none;
+}
+.carousel-control.right {
+    background-image: none;
+}
+
 #rsvpForm {
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
